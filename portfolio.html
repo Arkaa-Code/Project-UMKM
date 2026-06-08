@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portofolio proyek Wil — web development, Python, dan jaringan komputer.">
+  <title>Wil — Portofolio</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Sora:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ══ HEADER ══ -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Navigasi utama">
+        <a href="index.html" class="nav-logo">Arkaa<span>-</span>code</a>
+
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navList" aria-label="Buka menu navigasi">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-list" id="navList" role="list">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="portfolio.html" class="active" aria-current="page">Portofolio</a></li>
+          <li><a href="contact.html">Kontak</a></li>
+          <li>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark/light mode" style="background:none; border:none; color:inherit; cursor:pointer; font-size:1.2rem; display:flex; align-items:center;">
+              <span id="themeIcon">☀️</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ══ MAIN ══ -->
+  <main>
+
+    <!-- Page Hero -->
+    <section class="page-hero" aria-labelledby="porto-heading">
+      <div class="container">
+        <p class="section-label">Karya</p>
+        <h1 id="porto-heading">Proyek yang pernah<br>aku buat</h1>
+
+        <!-- Filter -->
+        <div class="filter-bar" role="group" aria-label="Filter kategori proyek">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">Semua</button>
+          <button class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+          <button class="filter-btn" data-filter="python" aria-pressed="false">Python</button>
+          <button class="filter-btn" data-filter="jaringan" aria-pressed="false">Jaringan</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section aria-label="Daftar proyek">
+      <div class="container">
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- Card 1 -->
+          <article class="project-card" data-cat="web">
+            <div class="card-banner card-banner--1" role="img" aria-label="Ilustrasi proyek Sistem Inventaris">📦</div>
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag">PHP</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">HTML/CSS</span>
+              </div>
+              <h2 class="card-title">Sistem Inventaris CRUD</h2>
+              <p class="card-desc">Aplikasi manajemen stok barang berbasis web dengan fitur tambah, edit, hapus, dan cari produk menggunakan PHP &amp; MySQL.</p>
+              <div class="card-links">
+                <a href="#" class="card-link-btn" aria-label="GitHub repository Sistem Inventaris">GitHub →</a>
+                <a href="#" class="card-link-btn" aria-label="Demo live Sistem Inventaris">Demo →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="project-card" data-cat="web">
+            <div class="card-banner card-banner--2" role="img" aria-label="Ilustrasi proyek Manajemen Buku">📚</div>
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag">PHP</span>
+                <span class="tag">MySQL</span>
+                <span class="tag tag-purple">Bootstrap</span>
+              </div>
+              <h2 class="card-title">Manajemen Buku</h2>
+              <p class="card-desc">Aplikasi CRUD untuk pengelolaan koleksi buku perpustakaan, lengkap dengan pencarian dan kategorisasi buku berdasarkan genre.</p>
+              <div class="card-links">
+                <a href="#" class="card-link-btn" aria-label="GitHub repository Manajemen Buku">GitHub →</a>
+                <a href="#" class="card-link-btn" aria-label="Demo live Manajemen Buku">Demo →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="project-card" data-cat="web">
+            <div class="card-banner card-banner--3" role="img" aria-label="Ilustrasi proyek 3-Column Card Component">🃏</div>
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag tag-purple">Flexbox</span>
+              </div>
+              <h2 class="card-title">3-Column Card Component</h2>
+              <p class="card-desc">Frontend Mentor challenge — komponen kartu responsif dengan hover animation dan SVG inline menggunakan CSS Flexbox murni.</p>
+              <div class="card-links">
+                <a href="#" class="card-link-btn" aria-label="GitHub repository 3-Column Card">GitHub →</a>
+                <a href="#" class="card-link-btn" aria-label="Live preview 3-Column Card">Live →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="project-card" data-cat="python">
+            <div class="card-banner card-banner--4" role="img" aria-label="Ilustrasi proyek Sorting Algorithm">🔀</div>
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag">Python</span>
+                <span class="tag tag-purple">Algoritma</span>
+                <span class="tag tag-purple">OOP</span>
+              </div>
+              <h2 class="card-title">Sorting Algorithm Visualizer</h2>
+              <p class="card-desc">Implementasi Bubble, Selection, Insertion, Merge, dan Quick Sort dalam Python dengan pendekatan OOP dan analisis perbandingan performa.</p>
+              <div class="card-links">
+                <a href="#" class="card-link-btn" aria-label="GitHub repository Sorting Algorithm">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="project-card" data-cat="python">
+            <div class="card-banner card-banner--5" role="img" aria-label="Ilustrasi proyek Linked List dan Search">🔍</div>
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag">Python</span>
+                <span class="tag tag-purple">Struktur Data</span>
+              </div>
+              <h2 class="card-title">Linked List &amp; Search</h2>
+              <p class="card-desc">Implementasi Linked List, Linear Search, Binary Search, dan Hash Search dengan Python berbasis OOP — tugas Algoritma &amp; Struktur Data.</p>
+              <div class="card-links">
+                <a href="#" class="card-link-btn" aria-label="GitHub repository Linked List dan Search">GitHub →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="project-card" data-cat="jaringan">
+            <div class="card-banner card-banner--6" role="img" aria-label="Ilustrasi proyek Lab Spanning Tree Protocol">🌐</div>
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag">Cisco</span>
+                <span class="tag tag-purple">Packet Tracer</span>
+                <span class="tag">STP</span>
+              </div>
+              <h2 class="card-title">Lab Spanning Tree Protocol</h2>
+              <p class="card-desc">Simulasi jaringan dengan Cisco Packet Tracer — konfigurasi STP pada tiga switch, analisis root bridge, port roles, dan uji konektivitas.</p>
+              <div class="card-links">
+                <a href="#" class="card-link-btn" aria-label="Laporan Lab STP">Laporan →</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p class="footer-copy">© 2026 Arkaa — Dibuat dengan ❤️ &amp; ☕</p>
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links" role="list">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="portfolio.html">Portofolio</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger
+    const toggle = document.getElementById('navToggle');
+    const navList = document.getElementById('navList');
+    toggle.addEventListener('click', function () {
+      const isOpen = navList.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    
+    if (localStorage.getItem('theme') === 'light') {
+      document.documentElement.classList.add('light-mode');
+      if(themeIcon) themeIcon.textContent = '🌙';
+    }
+
+    if(themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('light-mode');
+        if (document.documentElement.classList.contains('light-mode')) {
+          localStorage.setItem('theme', 'light');
+          themeIcon.textContent = '🌙';
+        } else {
+          localStorage.setItem('theme', 'dark');
+          themeIcon.textContent = '☀️';
+        }
+      });
+    }
+
+    // Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        filterBtns.forEach(function (b) {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
+        btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
+
+        var cat = btn.dataset.filter;
+        cards.forEach(function (card) {
+          if (cat === 'all' || card.dataset.cat === cat) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
