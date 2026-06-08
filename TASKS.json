@@ -1,0 +1,455 @@
+{
+  "projectName": "RZKY Equipment Services - Bug Fixes & Improvements",
+  "totalIssues": 15,
+  "phases": [
+    {
+      "phase": 1,
+      "name": "CRITICAL ISSUES",
+      "priority": "P0",
+      "estimatedHours": 1,
+      "issues": [
+        {
+          "id": 1,
+          "title": "Git Untracked Files",
+          "status": "TODO",
+          "effort": "15 min",
+          "tasks": [
+            {
+              "taskId": "1.1",
+              "title": "Add untracked image files ke git",
+              "status": "TODO",
+              "effort": "5 min"
+            },
+            {
+              "taskId": "1.2",
+              "title": "Commit dengan message yang jelas",
+              "status": "TODO",
+              "effort": "5 min"
+            },
+            {
+              "taskId": "1.3",
+              "title": "Verify files tersimpan di git history",
+              "status": "TODO",
+              "effort": "5 min"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "title": "Hardcoded Database Credentials",
+          "status": "TODO",
+          "effort": "60 min",
+          "files": [
+            "src/config/database.php"
+          ],
+          "tasks": [
+            {
+              "taskId": "2.1",
+              "title": "Create .env.example file dengan template credentials",
+              "status": "TODO",
+              "effort": "15 min"
+            },
+            {
+              "taskId": "2.2",
+              "title": "Modify src/config/database.php untuk read dari .env",
+              "status": "TODO",
+              "effort": "20 min"
+            },
+            {
+              "taskId": "2.3",
+              "title": "Add .env ke .gitignore",
+              "status": "TODO",
+              "effort": "5 min"
+            },
+            {
+              "taskId": "2.4",
+              "title": "Create .env (local) dengan actual credentials",
+              "status": "TODO",
+              "effort": "10 min"
+            },
+            {
+              "taskId": "2.5",
+              "title": "Update ADMIN_README.md dengan setup instructions",
+              "status": "TODO",
+              "effort": "10 min"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "name": "HIGH PRIORITY ISSUES",
+      "priority": "P1",
+      "estimatedHours": 6,
+      "issues": [
+        {
+          "id": 3,
+          "title": "XSS Vulnerability dalam onclick Handlers",
+          "status": "TODO",
+          "effort": "90 min",
+          "severity": "CRITICAL",
+          "files": [
+            "admin/reservations.php",
+            "public/reservation.php"
+          ],
+          "tasks": [
+            {
+              "taskId": "3.1",
+              "title": "Audit semua onclick handlers untuk XSS vulnerability",
+              "status": "TODO",
+              "effort": "15 min"
+            },
+            {
+              "taskId": "3.2",
+              "title": "Create utility function escapeJs() untuk safe escaping",
+              "status": "TODO",
+              "effort": "10 min"
+            },
+            {
+              "taskId": "3.3",
+              "title": "Fix onclick di admin/reservations.php (lines 683, 697)",
+              "status": "TODO",
+              "effort": "10 min"
+            },
+            {
+              "taskId": "3.4",
+              "title": "Fix onclick di public/reservation.php (lines 744, 752)",
+              "status": "TODO",
+              "effort": "10 min"
+            },
+            {
+              "taskId": "3.5",
+              "title": "Add data-* attributes untuk pass PHP values ke JS",
+              "status": "TODO",
+              "effort": "15 min"
+            },
+            {
+              "taskId": "3.6",
+              "title": "Test semua fixed buttons functionality",
+              "status": "TODO",
+              "effort": "10 min"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "title": "Undefined/Inconsistent Session Variables",
+          "status": "TODO",
+          "effort": "75 min",
+          "severity": "HIGH",
+          "files": [
+            "public/booking-success.php",
+            "admin/dashboard.php",
+            "admin/reservations.php"
+          ],
+          "tasks": [
+            {
+              "taskId": "4.1",
+              "title": "Create session initialization file src/includes/session-init.php",
+              "status": "TODO",
+              "effort": "15 min"
+            },
+            {
+              "taskId": "4.2",
+              "title": "Define standardized session key constants",
+              "status": "TODO",
+              "effort": "10 min"
+            },
+            {
+              "taskId": "4.3",
+              "title": "Add null-coalescing checks di booking-success.php",
+              "status": "TODO",
+              "effort": "10 min"
+            },
+            {
+              "taskId": "4.4",
+              "title": "Add null-coalescing checks di admin/dashboard.php",
+              "status": "TODO",
+              "effort": "10 min"
+            },
+            {
+              "taskId": "4.5",
+              "title": "Add null-coalescing checks di admin/reservations.php",
+              "status": "TODO",
+              "effort": "10 min"
+            },
+            {
+              "taskId": "4.6",
+              "title": "Test semua session flows dari login hingga checkout",
+              "status": "TODO",
+              "effort": "15 min"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "title": "Invoice Generator File Dependency",
+          "status": "TODO",
+          "effort": "60 min",
+          "severity": "HIGH",
+          "files": [
+            "admin/reservations.php"
+          ],
+          "tasks": [
+            {
+              "taskId": "5.1",
+              "title": "Verify src/includes/invoice-generator.php exists",
+              "status": "TODO",
+              "effort": "5 min"
+            },
+            {
+              "taskId": "5.2",
+              "title": "Create wrapper function getInvoiceGenerator()",
+              "status": "TODO",
+              "effort": "10 min"
+            },
+            {
+              "taskId": "5.3",
+              "title": "Add try-catch di admin/reservations.php untuk invoice generation",
+              "status": "TODO",
+              "effort": "15 min"
+            },
+            {
+              "taskId": "5.4",
+              "title": "Log invoice generation errors ke database/file",
+              "status": "TODO",
+              "effort": "10 min"
+            },
+            {
+              "taskId": "5.5",
+              "title": "Add fallback notification jika PDF generation gagal",
+              "status": "TODO",
+              "effort": "10 min"
+            },
+            {
+              "taskId": "5.6",
+              "title": "Test invoice generation dengan manual approval flow",
+              "status": "TODO",
+              "effort": "10 min"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 3,
+      "name": "MEDIUM PRIORITY ISSUES",
+      "priority": "P2",
+      "estimatedHours": 10,
+      "issues": [
+        {
+          "id": 6,
+          "title": "Inconsistent File Path Resolution",
+          "status": "TODO",
+          "effort": "65 min",
+          "files": [
+            "src/inventory/equipment-create.php",
+            "src/inventory/equipment-edit.php"
+          ],
+          "tasks": [
+            {
+              "taskId": "6.1",
+              "title": "Create path-helper.php untuk centralized path management",
+              "status": "TODO",
+              "effort": "15 min"
+            },
+            {
+              "taskId": "6.2",
+              "title": "Define constants untuk equipment upload directory",
+              "status": "TODO",
+              "effort": "10 min"
+            },
+            {
+              "taskId": "6.3",
+              "title": "Refactor equipment-create.php pakai path helper",
+              "status": "TODO",
+              "effort": "15 min"
+            },
+            {
+              "taskId": "6.4",
+              "title": "Refactor equipment-edit.php pakai path helper",
+              "status": "TODO",
+              "effort": "15 min"
+            },
+            {
+              "taskId": "6.5",
+              "title": "Test file upload dan old image deletion flow",
+              "status": "TODO",
+              "effort": "10 min"
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "title": "Admin Path Navigation Complexity",
+          "status": "TODO",
+          "effort": "45 min",
+          "files": [
+            "src/includes/admin-header.php"
+          ],
+          "tasks": [
+            {
+              "taskId": "8.1",
+              "title": "Create global BASE_PATH constant",
+              "status": "TODO",
+              "effort": "10 min"
+            },
+            {
+              "taskId": "8.2",
+              "title": "Refactor conditional paths ke standardized format",
+              "status": "TODO",
+              "effort": "20 min"
+            },
+            {
+              "taskId": "8.3",
+              "title": "Test navigation links dari admin dan inventory pages",
+              "status": "TODO",
+              "effort": "15 min"
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "title": "CSS Path Inconsistency",
+          "status": "TODO",
+          "effort": "45 min",
+          "files": [
+            "admin/dashboard.php",
+            "src/inventory/equipment-list.php"
+          ],
+          "tasks": [
+            {
+              "taskId": "9.1",
+              "title": "Create css-loader.php helper",
+              "status": "TODO",
+              "effort": "10 min"
+            },
+            {
+              "taskId": "9.2",
+              "title": "Add function loadCSS() untuk include CSS dengan base path aware",
+              "status": "TODO",
+              "effort": "10 min"
+            },
+            {
+              "taskId": "9.3",
+              "title": "Refactor semua files untuk use loadCSS()",
+              "status": "TODO",
+              "effort": "15 min"
+            },
+            {
+              "taskId": "9.4",
+              "title": "Test CSS loading di admin dan inventory pages",
+              "status": "TODO",
+              "effort": "10 min"
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "title": "No Consistent Error Logging",
+          "status": "TODO",
+          "effort": "90 min",
+          "files": [
+            "src/includes/error-logger.php"
+          ],
+          "tasks": [
+            {
+              "taskId": "10.1",
+              "title": "Create error-logger.php dengan logging functionality",
+              "status": "TODO",
+              "effort": "20 min"
+            },
+            {
+              "taskId": "10.2",
+              "title": "Create logs/ directory dengan .gitignore",
+              "status": "TODO",
+              "effort": "5 min"
+            },
+            {
+              "taskId": "10.3",
+              "title": "Update catch blocks di inventory files pakai logger",
+              "status": "TODO",
+              "effort": "20 min"
+            },
+            {
+              "taskId": "10.4",
+              "title": "Update catch blocks di admin files pakai logger",
+              "status": "TODO",
+              "effort": "15 min"
+            },
+            {
+              "taskId": "10.5",
+              "title": "Create admin page untuk view error logs",
+              "status": "TODO",
+              "effort": "20 min"
+            },
+            {
+              "taskId": "10.6",
+              "title": "Test error logging dengan intentional errors",
+              "status": "TODO",
+              "effort": "10 min"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "phase": 4,
+      "name": "LOW PRIORITY ISSUES",
+      "priority": "P3",
+      "estimatedHours": 8,
+      "issues": [
+        {
+          "id": 11,
+          "title": "Confirmation Dialog Inline JavaScript",
+          "status": "TODO",
+          "effort": "75 min"
+        },
+        {
+          "id": 12,
+          "title": "Database Query Optimization",
+          "status": "TODO",
+          "effort": "25 min"
+        },
+        {
+          "id": 13,
+          "title": "Unused Form Data State",
+          "status": "TODO",
+          "effort": "50 min"
+        },
+        {
+          "id": 14,
+          "title": "Favicon Cache Busting Parameter",
+          "status": "TODO",
+          "effort": "25 min"
+        },
+        {
+          "id": 15,
+          "title": "Database Schema Migration in Settings",
+          "status": "TODO",
+          "effort": "55 min"
+        }
+      ]
+    }
+  ],
+  "timeline": {
+    "week1": {
+      "days": "1-7",
+      "focus": "CRITICAL and HIGH priority",
+      "expectedCompletion": "2 CRITICAL, 3 HIGH issues"
+    },
+    "week2_3": {
+      "days": "8-21",
+      "focus": "MEDIUM and LOW priority",
+      "expectedCompletion": "5 MEDIUM, 5 LOW issues"
+    },
+    "week4": {
+      "days": "22-28",
+      "focus": "Testing, QA, deployment prep",
+      "expectedCompletion": "All issues + full regression testing"
+    }
+  },
+  "totalEstimatedHours": 25,
+  "completionTarget": "July 6, 2026"
+}
